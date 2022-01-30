@@ -9,7 +9,8 @@
 /vendor/
 ###< symfony/framework-bundle ###
 
-###< key API
+###< key API >###
+/assets/weatherstack/weatherstack.js
 ###> symfony/phpunit-bridge ###
 .phpunit.result.cache
 /phpunit.xml
