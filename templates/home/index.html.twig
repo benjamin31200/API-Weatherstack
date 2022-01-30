@@ -1,23 +1,36 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Hello HomeController!{% endblock %}
-
-{% block body %}
-<style>
-    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
-    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
-</style>
-
-<div class="example-wrapper">
-    <h1>Hello {{ controller_name }}! ✅</h1>
-
-    This friendly message is coming from:
-    <ul>
-        <li>Your controller at <code><a href="{{ '/home/benja/weatherstack/src/Controller/HomeController.php'|file_link(0) }}">src/Controller/HomeController.php</a></code></li>
-        <li>Your template at <code><a href="{{ '/home/benja/weatherstack/templates/home/index.html.twig'|file_link(0) }}">templates/home/index.html.twig</a></code></li>
-    </ul>
-</div>
-{% block javascripts %}
-            {{ encore_entry_script_tags('weatherstack') }}
+{% block title %}Hello HomeController!
 {% endblock %}
+{% block body %}
+	<section class="body">
+		<section class="select_city">
+			<div class="city city1"></div>
+			<div class="select">
+				<div class="div city1">
+					<label for="category">Choisit une ville:</label>
+					<select id="select_ city1">
+						<option selected>liste des villes:</option>
+						<option id="option_city1"></option>
+					</select>
+				</div>
+                <div class="div city2">
+					<label for="category">Choisit une ville:</label>
+					<select id="select_ city2">
+						<option selected>liste des villes:</option>
+						<option id="option_city2"></option>
+					</select>
+				</div>
+			</div>
+			<div class="city city2"></div>
+		</section>
+		<section class="comparator_city">
+			<div class="container comparator_city1"></div>
+			<div class="data"></div>
+			<div class="container comparator_city2"></div>
+		</section>
+	</section>
+	{% block javascripts %}
+		{{ encore_entry_script_tags('weatherstack') }}
+	{% endblock %}
 {% endblock %}
