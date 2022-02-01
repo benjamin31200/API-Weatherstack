@@ -1,0 +1,31 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}City index
+{% endblock %}
+
+{% block body %}
+	<section class="body">
+		<section class="select_city">
+			<div class="city city1">
+				<p>La première ville sélectionnée:</p>
+				<p class="setCity1">{{ city.city1 }}</p>
+			</div>
+			<div class="select">
+				<h1>Edit City</h1>
+				{{ include('city/_form.html.twig', {'button_label': 'Update'}) }}
+			</div>
+			<div class="city city2">
+				<p>La seconde ville sélectionnée:</p>
+				<p class="setCity2">{{ city.city2 }}</p>
+			</div>
+		</section>
+		<section class="comparator_city">
+			<div class="container comparator_city1"></div>
+			<div class="data"></div>
+			<div class="container comparator_city2"></div>
+		</section>
+	</section>
+{% endblock %}
+{% block javascripts %}
+	{{ encore_entry_script_tags('weatherstack') }}
+{% endblock %}

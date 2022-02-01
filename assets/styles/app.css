@@ -1,35 +1,20 @@
-.searchbar,
-.button {
-	height: 25px;
-	margin: 1rem;
-	padding: 0;
-	font: 400 1rem 'Roboto';
-	letter-spacing: 0.025em;
-	text-transform: uppercase;
-	color: rgb(0, 0, 0);
-	border: none;
-}
-.searchbar {
-	width: 180px;
-	border-bottom: solid thin rgb(0, 0, 0);
-	color: #000000;
-	color: rgba(0, 0, 0, 0.7);
+.select {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
-.searchbar::-webkit-input-placeholder {color: rgb(0, 0, 0); opacity: 0.35;}
-.searchbar::-moz-placeholder {color: rgb(0, 0, 0); opacity: 0.35;}
-.searchbar:-ms-input-placeholder {color: rgb(0, 0, 0); opacity: 0.35;}
-.searchbar:-moz-placeholder {color: rgb(0, 0, 0); opacity: 0.35;}
+form {
+  display: flex;
+  flex-direction: row;
+}
 
-.button:focus,
-.searchbar:focus {outline: none; color: rgb(0, 0, 0);}
-.searchbar:focus::-webkit-input-placeholder {color: rgb(0, 0, 0); opacity: 0.7;}
-.searchbar:focus::-moz-placeholder {color: rgb(0, 0, 0); opacity: 0.7;}
-.searchbar:focus:-ms-input-placeholder {color: rgb(0, 0, 0); opacity: 0.7;}
-.searchbar:focus:-moz-placeholder {color: rgb(0, 0, 0); opacity: 0.7;}
+#city1 {
+  display: flex;
+}
 
-.button {
-	width: 100px;
-    height: 2rem;
-    cursor: pointer;
+.select_city {
+	display: flex;
+    justify-content: space-between;
 }

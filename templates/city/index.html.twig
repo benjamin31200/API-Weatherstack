@@ -1,26 +1,15 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Hello HomeController!
+{% block title %}City index
 {% endblock %}
+
 {% block body %}
 	<section class="body">
 		<section class="select_city">
 			<div class="city city1"></div>
 			<div class="select">
-				<div class="div city1">
-					<label for="category">Choisit une ville:</label>
-					<select id="select_ city1">
-						<option selected>liste des villes:</option>
-						<option id="option_city1"></option>
-					</select>
-				</div>
-                <div class="div city2">
-					<label for="category">Choisit une ville:</label>
-					<select id="select_ city2">
-						<option selected>liste des villes:</option>
-						<option id="option_city2"></option>
-					</select>
-				</div>
+				<h1>Choisit les villes à comparer</h1>
+				{{ include('city/_form.html.twig') }}
 			</div>
 			<div class="city city2"></div>
 		</section>
