@@ -10,7 +10,8 @@
 ###< symfony/framework-bundle ###
 
 ###< key API >###
-/home/benja/weatherstack/assets/weatherstack/weatherstack.js
+/weatherstack
+/assets/weatherstack/weatherstack.js
 ###> symfony/phpunit-bridge ###
 .phpunit.result.cache
 /phpunit.xml
