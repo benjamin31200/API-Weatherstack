@@ -3,7 +3,7 @@
 namespace App\Controller;
 
 use App\Entity\City;
-use App\Form\City1Type;
+use App\Form\CityType;
 use App\Repository\CityRepository;
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
@@ -22,7 +22,7 @@ class CityController extends AbstractController
     public function index(CityRepository $cityRepository, Request $request, EntityManagerInterface $entityManager): Response
     {
         $city = new City();
-        $form = $this->createForm(City1Type::class, $city);
+        $form = $this->createForm(CityType::class, $city);
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
@@ -44,7 +44,7 @@ class CityController extends AbstractController
      */
     public function edit(Request $request, City $city, EntityManagerInterface $entityManager, CityRepository $cityRepository): Response
     {
-        $form = $this->createForm(City1Type::class, $city);
+        $form = $this->createForm(CityType::class, $city);
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
