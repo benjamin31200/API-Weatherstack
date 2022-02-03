@@ -21,12 +21,14 @@
 						{{ include('homepage/_formUpdateCity.html.twig', {'button_label': 'Changer'}) }}
 					</div>
 					<div class="formUpdateTransition">
-					<h1> Ou alors</h1>
+						<h1>
+							Ou alors</h1>
 					</div>
 					<div class="addToList">
 						<p>Constitue ta propre liste de ville en les ajoutant depuis cette recherche:</p>
 						<p>Et retrouve les sur la page ma liste</p>
-						<p>Tu pourras comparer leurs données sur les points qui t'intéresse </p>
+						<p>Tu pourras comparer leurs données sur les points qui t'intéresse
+						</p>
 						<form action="{{ path('homepage') }}" method="post">
 							<input type="search" name="addCities" placeholder="Rechercher...">
 							<input type="submit" name="rechercher">
@@ -35,14 +37,54 @@
 				</div>
 			</section>
 			<section class="comparator_city">
-				<div class="city">
-					<p>La ville sélectionnée:</p>
-					<p class="setCity">{{ app.user.city }}</p>
-				</div>
 				<div class="container">
-					<p class="country">Pays: </p>
+					<div class="city">
+						<p>La ville sélectionnée:
+						</p>
+						<p class="setCity">{{ app.user.city }}</p>
+					</div>
+					<p class="country">Pays:
+					</p>
+					<p class="region">Sa région:
+					</p>
+					<p class="localtime">L'heure locale:
+					</p>
+					<p class="timezone">Son fuseau horaire:
+					</p>
 				</div>
-				<div class="data"></div>
+				<div class="data">
+					<p>Retrouve les données en temps réel de la ville sélectionnée pour la journée:</p>
+					<ul>
+						<div class="currentMeteo">
+							<div class="row">
+								<li class="cloudcover">Couverture nuageuse: </li>
+							</div>
+							<div class="row">
+								<li class="feelslike">Température ressentie: </li>
+							</div>
+							<div class="row">
+								<li class="humidity">Humidité: </li>
+							</div>
+							<div class="row">
+								<li class="precip">Précipitation: </li>
+							</div>
+							<div class="row">
+								<li class="pressure">Pression atmosphérique: </li>
+							</div>
+							<div class="row">
+								<li class="temperature">Température: </li>
+							</div>
+							<div class="row">
+								<li class="weather">Temps: </li>
+							</div>
+							<div class="row wind">
+								<li class="wind_degree">degré de vent: </li>
+								<li class="wind_dir">direction: </li>
+								<li class="wind_speed">Temps: </li>
+							</div>
+						</div>
+					</ul>
+				</div>
 			</section>
 		</section>
 	{% endif %}

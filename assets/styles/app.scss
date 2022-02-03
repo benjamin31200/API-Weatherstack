@@ -13,8 +13,25 @@ p {
   margin: 0;
 }
 
+.city {
+  display: flex;
+  flex-direction: row;
+  gap: 0.5rem;
+}
+
+.row {
+  display: flex;
+}
+
+.row.wind {
+  display: flex;
+  flex-direction: column;
+}
+
 .comparator_city {
   margin-top: 2rem;
+  display: flex;
+  justify-content: space-around;
 }
 
 .register>label {
