@@ -1,0 +1,19 @@
+{{ form_start(form) }}
+
+
+        <div class="col mt-5">
+            <h3>Sélection de la semaine:</h3>
+        </div>
+        <div class="col mt-3">
+            {{ form_label(form.dateStart, 'séléctionne le début:') }}
+            {{ form_widget(form.dateStart) }}
+        </div>
+        <div class="col mt-3">
+            {{ form_label(form.dateEnd, 'séléctionne la fin:') }}
+            {{ form_widget(form.dateEnd) }}
+        </div>
+
+        <button class="btn btn-primary mt-3">{{ button_label|default('Valider') }}</button>
+
+
+{{ form_end(form) }}

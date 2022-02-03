@@ -57,34 +57,56 @@
 					<ul>
 						<div class="currentMeteo">
 							<div class="row">
-								<li class="cloudcover">Couverture nuageuse: </li>
+								<li class="cloudcover">Couverture nuageuse:
+								</li>
 							</div>
 							<div class="row">
-								<li class="feelslike">Température ressentie: </li>
+								<li class="feelslike">Température ressentie:
+								</li>
 							</div>
 							<div class="row">
-								<li class="humidity">Humidité: </li>
+								<li class="humidity">Humidité:
+								</li>
 							</div>
 							<div class="row">
-								<li class="precip">Précipitation: </li>
+								<li class="precip">Précipitation:
+								</li>
 							</div>
 							<div class="row">
-								<li class="pressure">Pression atmosphérique: </li>
+								<li class="pressure">Pression atmosphérique:
+								</li>
 							</div>
 							<div class="row">
-								<li class="temperature">Température: </li>
+								<li class="temperature">Température:
+								</li>
 							</div>
 							<div class="row">
-								<li class="weather">Temps: </li>
+								<li class="weather">Temps:
+								</li>
 							</div>
 							<div class="row wind">
-								<li class="wind_degree">degré de vent: </li>
-								<li class="wind_dir">direction: </li>
-								<li class="wind_speed">Temps: </li>
+								<li class="wind_degree">degré de vent:
+								</li>
+								<li class="wind_dir">direction:
+								</li>
+								<li class="wind_speed">Temps:
+								</li>
 							</div>
 						</div>
 					</ul>
 				</div>
+				<section class="weeklyComparator">
+					<div class="showDates">
+						{{ render(controller(
+        'App\\Controller\\DateController::index',
+    )) }}
+					</div>
+					<div class="editDates">
+					{{ render(controller(
+        'App\\Controller\\DateController::edit',
+    )) }}
+					</div>
+				</section>
 			</section>
 		</section>
 	{% endif %}

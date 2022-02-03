@@ -2,11 +2,11 @@
 
 namespace App\Entity;
 
-use App\Repository\DateRepository;
+use App\Repository\EventRepository;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
- * @ORM\Entity(repositoryClass=DateRepository::class)
+ * @ORM\Entity(repositoryClass=EventRepository::class)
  */
 class Date
 {
