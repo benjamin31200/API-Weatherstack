@@ -1,0 +1,28 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}City index
+{% endblock %}
+
+{% block body %}
+	<div class="navbar">
+		<div class="header">
+			<div class="btn acceuil">
+				<a id="buttonAccueil" href="/homepage">
+					<button class="bn3">Accueil</button>
+				</a>
+			</div>
+			<div class="btn list">
+				<a id="buttonList"  href="/list">
+					<button class="bn3">Ma liste</button>
+				</a>
+			</div>
+		</div>
+		{% if app.user %}
+			<div class="buttonLogout">
+				<a href="{{ path('app_logout') }}">
+					<button class="deconnexion"></button>
+				</a>
+			</div>
+		{% endif %}
+	</div>
+{% endblock %}

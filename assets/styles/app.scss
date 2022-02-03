@@ -1,0 +1,46 @@
+.select {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}>label {
+ visibility: hidden;
+}
+
+p {
+  display: flex;
+  margin: 0;
+}
+
+.comparator_city {
+  margin-top: 2rem;
+}
+
+.register>label {
+  visibility: initial;
+}
+
+form {
+  display: flex;
+  flex-direction: row;
+}
+
+#city {
+  display: flex;
+}
+
+.select_city {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.header {
+  display: flex;
+  justify-content: center;
+}
+
+.buttonLogout {
+  display: flex;
+  justify-content: flex-end;
+}

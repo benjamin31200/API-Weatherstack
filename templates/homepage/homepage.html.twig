@@ -1,0 +1,52 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}City index
+{% endblock %}
+
+{% block body %}
+	{% include "_navbar.html.twig" %}
+	{% if app.user %}
+		<section class="body">
+			<section class="select_city">
+				<div class="select">
+					<div class="formUpdate">
+						<div class="textCity">
+							<h1>Change la ville à ta guise</h1>
+							<p>Et récupère toutes les informations que tu désires</p>
+							<p>Météo...</p>
+							<p>Humidité...</p>
+							<p>Localisation...</p>
+							<p>Et bien plus encore !</p>
+						</div>
+						{{ include('homepage/_formUpdateCity.html.twig', {'button_label': 'Changer'}) }}
+					</div>
+					<div class="formUpdateTransition">
+					<h1> Ou alors</h1>
+					</div>
+					<div class="addToList">
+						<p>Constitue ta propre liste de ville en les ajoutant depuis cette recherche:</p>
+						<p>Et retrouve les sur la page ma liste</p>
+						<p>Tu pourras comparer leurs données sur les points qui t'intéresse </p>
+						<form action="{{ path('homepage') }}" method="post">
+							<input type="search" name="addCities" placeholder="Rechercher...">
+							<input type="submit" name="rechercher">
+						</form>
+					</div>
+				</div>
+			</section>
+			<section class="comparator_city">
+				<div class="city">
+					<p>La ville sélectionnée:</p>
+					<p class="setCity">{{ app.user.city }}</p>
+				</div>
+				<div class="container">
+					<p class="country">Pays: </p>
+				</div>
+				<div class="data"></div>
+			</section>
+		</section>
+	{% endif %}
+{% endblock %}
+{% block javascripts %}
+	{{ encore_entry_script_tags('weatherstack') }}
+{% endblock %}
