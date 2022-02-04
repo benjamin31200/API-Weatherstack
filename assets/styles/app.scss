@@ -4,8 +4,9 @@
   justify-content: center;
   align-items: center;
   gap: 2rem;
-}>label {
- visibility: hidden;
+}
+> label {
+  visibility: hidden;
 }
 
 p {
@@ -34,7 +35,7 @@ p {
   justify-content: space-around;
 }
 
-.register>label {
+.register > label {
   visibility: initial;
 }
 
@@ -60,4 +61,9 @@ form {
 .buttonLogout {
   display: flex;
   justify-content: flex-end;
+}
+
+.ulWeekly {
+  display: flex;
+  gap: 1.5rem;
 }

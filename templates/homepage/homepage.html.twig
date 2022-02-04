@@ -97,15 +97,74 @@
 				</div>
 				<section class="weeklyComparator">
 					<div class="showDates">
-						{{ render(controller(
-        'App\\Controller\\DateController::index',
-    )) }}
+						<p class="getStart">{{ dates.0.date_start }}</p>
+						<p class="getEnd">{{ dates.0.date_end }}</p>
 					</div>
-					<div class="editDates">
-					{{ render(controller(
-        'App\\Controller\\DateController::edit',
-    )) }}
-					</div>
+					<section class="weekly">
+						<div class="createDates">
+							{{ render(url('date_new')) }}
+						</div>
+						<div class="dataWeekly">
+							<ul class="ulWeekly">
+								<li class="day Monday">
+									<h1>Lundi</h1>
+									<ul>
+										<li class="avgMonday">Température Moyenne:</li>
+										<li>Température Maximum</li>
+										<li>Température Minimum</li>
+									</ul>
+								</li>
+								<li class="day Tuesday">
+									<h1>Mardi</h1>
+									<ul>
+										<li>Température Moyenne:</li>
+										<li>Température Maximum</li>
+										<li>Température Minimum</li>
+									</ul>
+								</li>
+								<li class="day Wednesday">
+									<h1>Mercredi</h1>
+									<ul>
+										<li>Température Moyenne:</li>
+										<li>Température Maximum</li>
+										<li>Température Minimum</li>
+									</ul>
+								</li>
+								<li class="day Thursday">
+									<h1>Jeudi</h1>
+									<ul>
+										<li>Température Moyenne:</li>
+										<li>Température Maximum</li>
+										<li>Température Minimum</li>
+									</ul>
+								</li>
+								<li class="day Friday">
+									<h1>Vendredi</h1>
+									<ul>
+										<li>Température Moyenne:</li>
+										<li>Température Maximum</li>
+										<li>Température Minimum</li>
+									</ul>
+								</li>
+								<li class="day Saturday">
+									<h1>Samedi</h1>
+									<ul>
+										<li>Température Moyenne:</li>
+										<li>Température Maximum</li>
+										<li>Température Minimum</li>
+									</ul>
+								</li>
+								<li class="day Friday">
+									<h1>Dimanche</h1>
+									<ul>
+										<li>Température Moyenne:</li>
+										<li>Température Maximum</li>
+										<li>Température Minimum</li>
+									</ul>
+								</li>
+							</ul>
+						</div>
+					</section>
 				</section>
 			</section>
 		</section>

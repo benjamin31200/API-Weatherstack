@@ -2,12 +2,13 @@
 import { get } from 'axios';
 
 const getCity = document.querySelectorAll('.setCity')[0].innerText;
-
+const getStartTime = document.querySelectorAll('.getStart')[0].innerText.split(' ')[0];
+const getEndTime = document.querySelectorAll('.getEnd')[0].innerText.split(' ')[0];
 const params = {
     access_key: '6d2338286c34ff04f43ca8c2a7f4bdcb',
     query: getCity,
-    historical_date_start: '2022-01-10',
-    historical_date_end: '2022-01-16',
+    historical_date_start: getStartTime,
+    historical_date_end: getEndTime,
     hourly: 1,
 };
 get('https://api.weatherstack.com/historical', { params })

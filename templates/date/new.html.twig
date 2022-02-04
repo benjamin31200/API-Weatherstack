@@ -1,0 +1,24 @@
+{% if createDate %}
+	<a href="{{ path('date_new') }}"></a>
+
+
+	{{ form_start(createDate) }}
+
+	<h1>Sélectionne la semaine de ton choix</h1>
+	<div class="col mt-5">
+		<h3>Sélection de la semaine:</h3>
+	</div>
+	<div class="col mt-3">
+		{{ form_label(createDate.dateStart, 'séléctionne le début:') }}
+		{{ form_widget(createDate.dateStart) }}
+	</div>
+	<div class="col mt-3">
+		{{ form_label(createDate.dateEnd, 'séléctionne la fin:') }}
+		{{ form_widget(createDate.dateEnd) }}
+	</div>
+
+	<button class="btn btn-primary mt-3">{{ button_label|default('Valider') }}</button>
+
+
+	{{ form_end(createDate) }}
+{% endif %}

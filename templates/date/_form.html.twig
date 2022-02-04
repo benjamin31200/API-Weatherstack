@@ -1,19 +1,19 @@
-{{ form_start(form) }}
+{{ form_start(updateDate) }}
 
 
         <div class="col mt-5">
             <h3>Sélection de la semaine:</h3>
         </div>
         <div class="col mt-3">
-            {{ form_label(form.dateStart, 'séléctionne le début:') }}
-            {{ form_widget(form.dateStart) }}
+            {{ form_label(updateDate.dateStart, 'séléctionne le début:') }}
+            {{ form_widget(updateDate.dateStart) }}
         </div>
         <div class="col mt-3">
-            {{ form_label(form.dateEnd, 'séléctionne la fin:') }}
-            {{ form_widget(form.dateEnd) }}
+            {{ form_label(updateDate.dateEnd, 'séléctionne la fin:') }}
+            {{ form_widget(updateDate.dateEnd) }}
         </div>
 
-        <button class="btn btn-primary mt-3">{{ button_label|default('Valider') }}</button>
+        <button class="btn btn-primary mt-3">{{ button_label|default('Changer') }}</button>
 
 
-{{ form_end(form) }}
+{{ form_end(updateDate) }}

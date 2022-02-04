@@ -1,7 +1,0 @@
-{% for date in dates %}
-	<a href="{{ path('date_index') }}"></a>
-		<tr>
-			<td>{{ date.dateStart ? date.dateStart|date('Y-m-d') : '' }}</td>
-			<td>{{ date.dateEnd ? date.dateEnd|date('Y-m-d') : '' }}</td>
-		</tr>
-{% endfor %}

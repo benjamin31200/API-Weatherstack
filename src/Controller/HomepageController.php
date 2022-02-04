@@ -2,8 +2,11 @@
 
 namespace App\Controller;
 
+use App\Entity\Date;
 use App\Entity\ListCity;
+use App\Form\DateType;
 use App\Form\UserType;
+use App\Repository\EventRepository;
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
@@ -17,17 +20,27 @@ class HomepageController extends AbstractController
     /**
      * @Route("/homepage", name="homepage", methods={"GET", "POST"})
      */
-    public function edit(Request $request, EntityManagerInterface $entityManager): Response
+    public function edit(Request $request, EntityManagerInterface $entityManager, EventRepository $dateRepository): Response
     {
+        $date = new Date;
         $listCity = new ListCity;
         $getUser = $this->getUser();
+        $createDate = $this->createForm(DateType::class, $date);
         $form = $this->createForm(UserType::class, $getUser);
-        $form->handleRequest($request);
         
-        if ($form->isSubmitted() && $form->isValid()) {
-            $entityManager->flush();
+        if ($request->isMethod('POST')) {
+            $createDate->handleRequest($request);
+            $form->handleRequest($request);
+            if ($createDate->isSubmitted() && $createDate->isValid()) {
+                $entityManager->persist($date);
+                $entityManager->flush();
 
-            return $this->redirectToRoute('homepage', [], Response::HTTP_SEE_OTHER);
+                return $this->redirectToRoute('homepage', [], Response::HTTP_SEE_OTHER);
+            } else if ($form->isSubmitted() && $form->isValid()) {
+                $entityManager->flush();
+
+                return $this->redirectToRoute('homepage', [], Response::HTTP_SEE_OTHER);
+            }
         }
 
         if (isset($_POST['addCities']) and !empty($_POST['addCities'])) {
@@ -39,10 +52,12 @@ class HomepageController extends AbstractController
 
             return $this->redirectToRoute('homepage', [], Response::HTTP_SEE_OTHER);
         }
-
         return $this->render('homepage/homepage.html.twig', [
             'user' => $getUser,
             'form' => $form->createView(),
+            'date' => $date,
+            'createDate' => $createDate->createView(),
+            'dates' => $dateRepository->findIdDESC(),
         ]);
     }
 }
