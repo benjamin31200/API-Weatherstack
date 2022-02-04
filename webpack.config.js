@@ -31,6 +31,7 @@ Encore
      */
     .addEntry('app', './assets/app.js')
     .addEntry('weatherstack', './assets/weatherstack/weatherstack.js')
+    .addEntry('list', './assets/list/list.js')
 
     // enables the Symfony UX Stimulus bridge (used in assets/bootstrap.js)
     .enableStimulusBridge('./assets/controllers.json')

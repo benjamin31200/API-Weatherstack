@@ -19,22 +19,22 @@ class ListCityRepository extends ServiceEntityRepository
         parent::__construct($registry, ListCity::class);
     }
 
-    // /**
+
     //  * @return ListCity[] Returns an array of ListCity objects
     //  */
-    /*
-    public function findByExampleField($value)
+
+    public function findByUserId(int $userId)
     {
-        return $this->createQueryBuilder('l')
-            ->andWhere('l.exampleField = :val')
-            ->setParameter('val', $value)
-            ->orderBy('l.id', 'ASC')
-            ->setMaxResults(10)
-            ->getQuery()
-            ->getResult()
-        ;
+        $conn = $this->getEntityManager()->getConnection();
+
+        $sql = '
+            SELECT * FROM list_city l
+            WHERE l.user_id = :user
+            ';
+        $stmt = $conn->prepare($sql);
+        $resultSet = $stmt->executeQuery(['user' => $userId]);
+        return $resultSet->fetchAllAssociative();
     }
-    */
 
     /*
     public function findOneBySomeField($value): ?ListCity

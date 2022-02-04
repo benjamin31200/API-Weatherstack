@@ -4,25 +4,39 @@
 {% endblock %}
 
 {% block body %}
-	<h1 class="register">Inscription</h1>
+	<section class="register">
+		<div class="flex">
+			<h1 class="register">Inscription</h1>
 
-	{{ form_start(registrationForm) }}
-	{{ form_row(registrationForm.email) }}
-	{{ form_row(registrationForm.plainPassword, {
-            label: 'Mot-de-passe'
+			{{ form_start(registrationForm) }}
+			{{ form_row(registrationForm.email, {
+				label: 'Email:'
+			}) }}
+			{{ form_row(registrationForm.plainPassword, {
+            label: 'Mot-de-passe: '
         }) }}
-	{{ form_row(registrationForm.agreeTerms) }}
+			<div class="registerFinish">
+				{{ form_row(registrationForm.agreeTerms, {
+					label: 'J\'accepte les termes'
+				}) }}
 
-	<button type="submit" class="bn3">Inscription</button>
-	{{ form_end(registrationForm) }}
-
+				<button type="submit" class="bn3">Inscription</button>
+			</div>
+			<div class="selectCity">
+				<h4>Enfin, pour débuter sélectionne une ville.</h2>
+				{{ form_end(registrationForm) }}
+			</div>
+		</div>
+	</section>
 	<div class="goToLogin">
 		<p>Vous avez déjà un compte ?</p>
-		<p>
-			par ici 👉
-		</p>
-		<a id="buttonAccueil" href="/login">
-			<button class="bn3">Connexion</button>
-		</a>
+		<div class="login">
+			<p>
+				par ici 👉
+			</p>
+			<a id="buttonAccueil" href="/login">
+				<button class="bn3">Connexion</button>
+			</a>
+		</div>
 	</div>
 {% endblock %}

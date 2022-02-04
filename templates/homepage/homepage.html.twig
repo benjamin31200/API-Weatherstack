@@ -96,70 +96,41 @@
 					</ul>
 				</div>
 				<section class="weeklyComparator">
-					<div class="showDates">
-						<p class="getStart">{{ dates.0.date_start }}</p>
-						<p class="getEnd">{{ dates.0.date_end }}</p>
-					</div>
 					<section class="weekly">
 						<div class="createDates">
 							{{ render(url('date_new')) }}
 						</div>
 						<div class="dataWeekly">
 							<ul class="ulWeekly">
-								<li class="day Monday">
-									<h1>Lundi</h1>
+								<li class="Params">
+									<h1>Données</h1>
 									<ul>
-										<li class="avgMonday">Température Moyenne:</li>
-										<li>Température Maximum</li>
-										<li>Température Minimum</li>
+										<li class="day avgData">Température Moyenne</li>
+										<li class="day maxData">Température Maximum</li>
+										<li class="day minData">Température Minimum</li>
+										<li class="day illuminationMoon">illumination de la lune</li>
 									</ul>
 								</li>
-								<li class="day Tuesday">
-									<h1>Mardi</h1>
+								<li class="day1">
+									<p class="getStart">{{ dates.0.date_start }}</p>
+									<p class="getStartTime"></p>
+									<h1>Première journée</h1>
 									<ul>
-										<li>Température Moyenne:</li>
-										<li>Température Maximum</li>
-										<li>Température Minimum</li>
+										<li class="day avgDay1"></li>
+										<li class="day maxDay1"></li>
+										<li class="day minDay1"></li>
+										<li class="day moon1"></li>
 									</ul>
 								</li>
-								<li class="day Wednesday">
-									<h1>Mercredi</h1>
+								<li class="day2">
+									<p class="getEnd">{{ dates.0.date_end }}</p>
+									<p class="getEndTime"></p>
+									<h1>Deuxième journée</h1>
 									<ul>
-										<li>Température Moyenne:</li>
-										<li>Température Maximum</li>
-										<li>Température Minimum</li>
-									</ul>
-								</li>
-								<li class="day Thursday">
-									<h1>Jeudi</h1>
-									<ul>
-										<li>Température Moyenne:</li>
-										<li>Température Maximum</li>
-										<li>Température Minimum</li>
-									</ul>
-								</li>
-								<li class="day Friday">
-									<h1>Vendredi</h1>
-									<ul>
-										<li>Température Moyenne:</li>
-										<li>Température Maximum</li>
-										<li>Température Minimum</li>
-									</ul>
-								</li>
-								<li class="day Saturday">
-									<h1>Samedi</h1>
-									<ul>
-										<li>Température Moyenne:</li>
-										<li>Température Maximum</li>
-										<li>Température Minimum</li>
-									</ul>
-								</li>
-								<li class="day Friday">
-									<h1>Dimanche</h1>
-									<ul>
-										<li>Température Moyenne:</li>
-										<li>Température Maximum</li>
-										<li>Température Minimum</li>
+										<li class="day avgDay2"></li>
+										<li class="day maxDay2"></li>
+										<li class="day minDay2"></li>
+										<li class="day moon2"></li>
 									</ul>
 								</li>
 							</ul>
