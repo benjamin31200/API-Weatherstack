@@ -11,25 +11,26 @@
 				<div class="select">
 					<div class="formUpdate">
 						<div class="textCity">
-							<h1>Change la ville à ta guise</h1>
-							<p>Et récupère toutes les informations que tu désires</p>
-							<p>Météo...</p>
-							<p>Humidité...</p>
-							<p>Localisation...</p>
-							<p>Et bien plus encore !</p>
+							<h1 class="infoCity">Change la ville à ta guise</h1>
+							<p class="infoCity">Et récupère toutes les informations que tu désires</p>
+							<p class="infoCity">Météo...</p>
+							<p class="infoCity">Humidité...</p>
+							<p class="infoCity">Localisation...</p>
+							<p class="infoCity">Et bien plus encore !</p>
+							{{ include('homepage/_formUpdateCity.html.twig', {'button_label': 'Changer'}) }}
 						</div>
-						{{ include('homepage/_formUpdateCity.html.twig', {'button_label': 'Changer'}) }}
 					</div>
 					<div class="formUpdateTransition">
 						<h1>
 							Ou alors</h1>
 					</div>
 					<div class="addToList">
-						<p>Constitue ta propre liste de ville en les ajoutant depuis cette recherche:</p>
-						<p>Et retrouve les sur la page ma liste</p>
-						<p>Tu pourras comparer leurs données sur les points qui t'intéresse
+						<h1 class="infoCity">Constitue ta liste de ville personnalisée</h1>
+						<p class="infoCity">Constitue ta propre liste de ville en les ajoutant depuis cette recherche:</p>
+						<p class="infoCity">Et retrouve les sur la page ma liste</p>
+						<p class="infoCity">Tu pourras comparer leurs données sur les points qui t'intéresse
 						</p>
-						<form action="{{ path('homepage') }}" method="post">
+						<form class="formCity" action="{{ path('homepage') }}" method="post">
 							<input type="search" name="addCities" placeholder="Rechercher...">
 							<input type="submit" name="rechercher">
 						</form>
@@ -37,25 +38,10 @@
 				</div>
 			</section>
 			<section class="comparator_city">
-				<div class="container">
-					<div class="city">
-						<p>La ville sélectionnée:
-						</p>
-						<p class="setCity">{{ app.user.city }}</p>
-					</div>
-					<p class="country">Pays:
-					</p>
-					<p class="region">Sa région:
-					</p>
-					<p class="localtime">L'heure locale:
-					</p>
-					<p class="timezone">Son fuseau horaire:
-					</p>
-				</div>
 				<div class="data">
-					<p>Retrouve les données en temps réel de la ville sélectionnée pour la journée:</p>
-					<ul>
-						<div class="currentMeteo">
+					<h3>Retrouve les données en temps réel de la ville sélectionnée pour la journée:</h3>
+					<ul class="ulData">
+						<div class="infoCityComparator currentMeteo">
 							<div class="row">
 								<li class="cloudcover">Couverture nuageuse:
 								</li>
@@ -80,10 +66,6 @@
 								<li class="temperature">Température:
 								</li>
 							</div>
-							<div class="row">
-								<li class="weather">Temps:
-								</li>
-							</div>
 							<div class="row wind">
 								<li class="wind_degree">degré de vent:
 								</li>
@@ -94,6 +76,18 @@
 							</div>
 						</div>
 					</ul>
+				</div>
+				<div class="containerText">
+					<div class="container">
+						<p class="weather"></p>
+						<div class="infoCityCont city">
+							<h4 class="setCity">{{ app.user.city }}</h4>
+						</div>
+						<h4 class="country"></h4>
+						<h4 class="region"></h4>
+						<h4 class="localtime"></h4>
+						<h4 class="timezone"></h4>
+					</div>
 				</div>
 				<section class="weeklyComparator">
 					<section class="weekly">

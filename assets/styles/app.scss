@@ -61,6 +61,8 @@ form {
 .buttonLogout {
   display: flex;
   justify-content: flex-end;
+  position: relative;
+  bottom: 1.5rem;
 }
 
 .ulWeekly {
@@ -69,9 +71,42 @@ form {
 }
 
 .day {
-  font-size: 0.7rem;
+  font-size: 1rem;
   display: flex;
   flex-direction: column;
+}
+
+.Params {
+  list-style: none;
+  margin-top: 1.5rem;
+}
+
+#date_dateStart_time_hour,
+#date_dateStart_time_minute,
+#date_dateEnd_time_minute,
+#date_dateEnd_time_hour {
+  display: none;
+}
+
+.btn.btn-primary.mt-3 {
+  margin-top: 1.5rem;
+  height: 1.5rem;
+}
+
+.dataWeekly
+h1 {
+  margin: 0;
+}
+
+.day1,
+.day2 {
+  list-style: none;
+}
+
+.day1,
+.day2
+p {
+  margin: 0;
 }
 
 ul {
@@ -99,11 +134,16 @@ ul {
 }
 
 #registration_form_email {
-  margin-left: 3rem;
+  margin-left: 3.4rem;
 }
 
 #registration_form_agreeTerms {
   margin-right: 2rem;
+}
+
+.loginAcces {
+  display: flex;
+  flex-direction: column;
 }
 
 .registerFinish {
@@ -131,6 +171,116 @@ ul {
   width: 25rem;
   height: 20rem;
   border-radius: 10px;
+}
+
+.btn {
+  margin-right: 0.5rem;
+}
+
+.textCity,
+.addToList {
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  box-shadow: rgb(0 0 0 / 25%) 0px 54px 55px, rgb(0 0 0 / 12%) 0px -12px 30px,
+    rgb(0 0 0 / 12%) 0px 4px 6px, rgb(0 0 0 / 17%) 0px 12px 13px,
+    rgb(0 0 0 / 9%) 0px -3px 5px;
+  width: 24rem;
+  height: 15rem;
+  border-radius: 10px;
+  align-items: stretch;
+}
+
+.data {
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  box-shadow: rgb(0 0 0 / 25%) 0px 54px 55px, rgb(0 0 0 / 12%) 0px -12px 30px,
+    rgb(0 0 0 / 12%) 0px 4px 6px, rgb(0 0 0 / 17%) 0px 12px 13px,
+    rgb(0 0 0 / 9%) 0px -3px 5px;
+  width: 25rem;
+  height: 22rem;
+  border-radius: 10px;
+  align-items: stretch;
+}
+
+.container {
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  box-shadow: rgb(0 0 0 / 25%) 0px 54px 55px, rgb(0 0 0 / 12%) 0px -12px 30px,
+    rgb(0 0 0 / 12%) 0px 4px 6px, rgb(0 0 0 / 17%) 0px 12px 13px,
+    rgb(0 0 0 / 9%) 0px -3px 5px;
+  width: 15rem;
+  height: 15rem;
+  border-radius: 50%;
+  align-items: center;
+  justify-content: center;
+  text-decoration: underline;
+}
+
+.weekly {
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  box-shadow: rgb(0 0 0 / 25%) 0px 54px 55px, rgb(0 0 0 / 12%) 0px -12px 30px,
+    rgb(0 0 0 / 12%) 0px 4px 6px, rgb(0 0 0 / 17%) 0px 12px 13px,
+    rgb(0 0 0 / 9%) 0px -3px 5px;
+  width: 28rem;
+  height: 22rem;
+  border-radius: 10px;
+  align-items: stretch;
+}
+
+.formCity {
+  margin-top: 0.5rem;
+  margin-left: 0.8rem;
+  display: flex;
+  justify-content: center;
+}
+
+h4 {
+  display: flex;
+  margin: 0;
+}
+
+.infoCity,
+.infoCityContainer,
+.createDates,
+.dataWeekly {
+  margin-left: 1rem;
+  line-height: 1.5rem;
+}
+
+.infoCityComparator {
+  margin-left: 2rem;
+  line-height: 1.5rem;
+  justify-content: center;
+}
+
+.ulData {
+  display: flex;
+  justify-content: center;
+}
+
+.data h3 {
+  display: flex;
+  margin: 1rem;
+  text-align: center;
+}
+
+.flexForm {
+  display: flex;
+  gap: 1rem;
+}
+
+.weather img {
+  border-radius: 50%;
+  margin-bottom: 1rem;
+}
+
+.navbar {
+  border-bottom: 1px solid;
 }
 
 .required {
