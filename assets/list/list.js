@@ -17,38 +17,3 @@ for (const city of getListCity) {
             console.log(error);
         });
 }
-console.log(getTemperature);
-
-const table = document.querySelector('.test');
-
-const tableSDRMonth = document.createElement('table');
-tableSDRMonth.classList.add('tableStat');
-const thead = document.createElement('thead');
-const tbody = document.createElement('tbody');
-
-tableSDRMonth.appendChild(thead);
-tableSDRMonth.appendChild(tbody);
-table.appendChild(tableSDRMonth);
-
-const row1 = document.createElement('tr');
-const heading1 = document.createElement('th');
-heading1.innerHTML = 'Département';
-const heading2 = document.createElement('th');
-heading2.innerHTML = 'Nombre de permanence par SDR sur le mois';
-
-row1.appendChild(heading1);
-row1.appendChild(heading2);
-thead.appendChild(row1);
-
-const row2 = document.createElement('tr');
-const rowdata1 = document.createElement('td');
-rowdata1.classList.add('tdSDR');
-const test = apiResponse;
-rowdata1.innerHTML = test;
-const rowdata2 = document.createElement('td');
-rowdata2.classList.add('tdQuota');
-rowdata2.innerHTML = 'hello';
-
-row2.appendChild(rowdata1);
-row2.appendChild(rowdata2);
-tbody.appendChild(row2);
