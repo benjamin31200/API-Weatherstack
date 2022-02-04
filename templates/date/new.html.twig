@@ -1,0 +1,24 @@
+{% if createDate %}
+	<a href="{{ path('date_new') }}"></a>
+
+
+	{{ form_start(createDate) }}
+	<section class="formDate">
+		<div class="col mt-5">
+			<h3>Sélectionne deux jours pour comparer leurs données</h3>
+		</div>
+		<div class="flexForm">
+			<div class="col mt-3">
+				{{ form_label(createDate.dateStart, 'premier jour:') }}
+				{{ form_widget(createDate.dateStart) }}
+			</div>
+			<div class="col mt-3">
+				{{ form_label(createDate.dateEnd, 'deuxième jour:') }}
+				{{ form_widget(createDate.dateEnd) }}
+			</div>
+			<button class="btn btn-primary mt-3">{{ button_label|default('Valider') }}</button>
+		</div>
+	</section>
+
+	{{ form_end(createDate) }}
+{% endif %}

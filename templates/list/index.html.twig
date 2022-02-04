@@ -1,0 +1,20 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello ListController!
+{% endblock %}
+
+{% block body %}
+	{% include "_navbar.html.twig" %}
+	{% if app.user %}
+		{% for city in list %}
+			<ul>
+				<li class="ListCity">{{ city.cities }}</li>
+			</ul>
+			<p class="test"></p>
+		{% endfor %}
+	{% endif %}
+{% endblock %}
+{% block javascripts %}
+	{{ encore_entry_script_tags('list') }}
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.0/chart.min.js" integrity="sha512-TW5s0IT/IppJtu76UbysrBH9Hy/5X41OTAbQuffZFU6lQ1rdcLHzpU5BzVvr/YFykoiMYZVWlr/PX1mDcfM9Qg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+{% endblock %}
