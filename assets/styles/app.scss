@@ -9,9 +9,21 @@
   visibility: hidden;
 }
 
+h1,
+h2,
+h3,
+h4 {
+  font-family: 'RichEatinAllCaps';
+}
+
 p {
   display: flex;
   margin: 0;
+  font-family: 'FuntypeRegular';
+}
+
+li {
+  font-family: 'FuntypeRegular';
 }
 
 .city {
@@ -48,6 +60,11 @@ form {
   display: flex;
 }
 
+body {
+  background: url(https://png.pngtree.com/back_origin_pic/02/67/65/f26e2ee2eb714423719a016eab729365.jpg);
+  background-size: cover;
+}
+
 .select_city {
   display: flex;
   justify-content: space-evenly;
@@ -79,6 +96,12 @@ form {
 .Params {
   list-style: none;
   margin-top: 1.5rem;
+  text-align: center;
+}
+
+.Params
+li {
+  font-size: 0.8rem;
 }
 
 #date_dateStart_time_hour,
@@ -171,6 +194,8 @@ ul {
   width: 25rem;
   height: 20rem;
   border-radius: 10px;
+  background-color: white;
+  border: 2px solid;
 }
 
 .btn {
@@ -189,6 +214,8 @@ ul {
   height: 15rem;
   border-radius: 10px;
   align-items: stretch;
+  background-color: rgb(255 255 255);
+  border: 2px solid;
 }
 
 .data {
@@ -202,6 +229,8 @@ ul {
   height: 22rem;
   border-radius: 10px;
   align-items: stretch;
+  background-color: rgb(255 255 255);
+  border: 2px solid;
 }
 
 .container {
@@ -217,6 +246,8 @@ ul {
   align-items: center;
   justify-content: center;
   text-decoration: underline;
+  background-color: rgb(255 255 255);
+  border: 2px solid;
 }
 
 .weekly {
@@ -230,12 +261,25 @@ ul {
   height: 22rem;
   border-radius: 10px;
   align-items: stretch;
+  background-color: rgb(255 255 255);
+  border: 2px solid;
+}
+
+.formUpdateTransition
+h1 {
+  color: rgb(0, 0, 0);
 }
 
 .formCity {
   margin-top: 0.5rem;
   margin-left: 0.8rem;
   display: flex;
+  justify-content: center;
+}
+
+
+.formCitySearch {
+  margin-top: 2rem;
   justify-content: center;
 }
 
@@ -286,3 +330,4 @@ h4 {
 .required {
   margin-right: 1rem;
 }
+

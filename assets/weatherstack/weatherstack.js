@@ -1,11 +1,12 @@
 /* eslint-disable no-console */
 import { get } from 'axios';
+import { apiKey } from 'api.js';
 
 const getCity = document.querySelectorAll('.setCity')[0].innerText;
 const getStartTime = document.querySelectorAll('.getStart')[0].innerText.split(' ')[0];
 const getEndTime = document.querySelectorAll('.getEnd')[0].innerText.split(' ')[0];
 const params = {
-    access_key: '6d2338286c34ff04f43ca8c2a7f4bdcb',
+    access_key: apiKey,
     query: getCity,
     historical_date_start: getStartTime,
     historical_date_end: getEndTime,
@@ -39,6 +40,7 @@ get('https://api.weatherstack.com/historical', { params })
         document.querySelector('.moon1').append(`${apiResponse.historical[getEndTime].astro.moon_illumination}%`);
         document.querySelector('.moon2').append(`${apiResponse.historical[getEndTime].astro.moon_illumination}%`);
         const weatherIcon = document.createElement('img');
+        // eslint-disable-next-line prefer-destructuring
         weatherIcon.src = apiResponse.current.weather_icons[0];
         document.querySelector('.weather').append(weatherIcon);
     }).catch((error) => {

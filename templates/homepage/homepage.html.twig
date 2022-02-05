@@ -30,7 +30,7 @@
 						<p class="infoCity">Et retrouve les sur la page ma liste</p>
 						<p class="infoCity">Tu pourras comparer leurs données sur les points qui t'intéresse
 						</p>
-						<form class="formCity" action="{{ path('homepage') }}" method="post">
+						<form class="formCitySearch" action="{{ path('homepage') }}" method="post">
 							<input type="search" name="addCities" placeholder="Rechercher...">
 							<input type="submit" name="rechercher">
 						</form>
@@ -133,6 +133,7 @@
 				</section>
 			</section>
 		</section>
+		
 	{% endif %}
 {% endblock %}
 {% block javascripts %}
